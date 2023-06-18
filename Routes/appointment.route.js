@@ -9,7 +9,7 @@ appointmentRoute.post("/date",async(req,res)=>{
        let date=req.body
        let data=new AppointmentModel(date)
        await data.save()
-       res.status(200).send({message:"done"}) 
+       res.status(200).send({message:"Your appointment date has been scheduled."}) 
     } catch (error) {
         console.log(error)
     }

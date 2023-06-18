@@ -9,7 +9,7 @@ contectRoute.post("/add",async(req,res)=>{
        const data=req.body
        const contect= new contectModel(data)
        await contect.save()
-       res.status(200).send({message:"conform"}) 
+       res.status(200).send({message:`Your meeting schedule with ${data.name} has been successfully fixed.`}) 
     } catch (error) {
         console.log(error)
     }

@@ -38,7 +38,7 @@ userconformRoute.post("/add",async(req,res)=>{
             }
           });
 
-       res.status(200).send({message:"conform"}) 
+       res.status(200).send({message:`Your meeting has been confirmed with the specified ${data.time} and ${appointmentdate[0].Date}.`}) 
     } catch (error) {
         console.log(error)
     }
